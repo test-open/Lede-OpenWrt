@@ -71,23 +71,9 @@
 使用方法：用WinSCP(文件协议F选择SCP)连接你路由器，在etc/config里面把想要文件拖到你电脑上，在电脑上建立一个files\etc\config，把你拖出来的文件都放这里，然后把files文件夹传到github根目录就可以了，我只尝试etc/config这个文件夹里面有效的，其他文件没试过，你们可以多做尝试
 - 编译成功跟失败都邮件通知--右上角头像-->Settings-->Notifications的差不多最下面找到《Send notifications for failed workflows only》把前面的勾去掉就好了
 
-#
-# SSH工具下载
-- 首先下载，安装好一个SSH工具 《[点击下载putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/releases/0.74.html)》
-![xm1](doc/111.png)
 
 
-# 
-# SSH连接说明
-![xm1](doc/01.png)
-![xm1](doc/02.png)
-![xm1](doc/03.png)
-![xm1](doc/04.png)
-![xm1](doc/05.png)
-![xm1](doc/06.png)
-![xm1](doc/07.png)
 
-# 
 # Actions-OpenWrt
 
 - 感谢coolsnowwolf/lede大神提供的源码
