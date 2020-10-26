@@ -8,12 +8,12 @@ rm -rf package/lean/luci-theme-argon
 #
 
 # 修改openwrt登陆地址,把下面的192.168.2.2修改成你想要的就可以了，其他的不要动
-sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
 
 
 #修改内核版本（下面两行代码前面有#为源码默认最新5.4内核,没#为4.19内核,默认修改X86的，其他机型L大那里target/linux查看，对应修改下面的路径就好）
-#sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=4.19/g' ./target/linux/x86/Makefile  #修改内核版本
-#sed -i 's/KERNEL_TESTING_PATCHVER:=5.4/KERNEL_TESTING_PATCHVER:=4.19/g' ./target/linux/x86/Makefile  #修改内核版本
+#sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=4.14/g' ./target/linux/ramips/Makefile  #修改内核版本
+#sed -i 's/KERNEL_TESTING_PATCHVER:=5.4/KERNEL_TESTING_PATCHVER:=4.14/g' ./target/linux/ramips/Makefile  #修改内核版本
 
 
 #取消掉feeds.conf.default文件里面的helloworld的#注释
@@ -41,8 +41,8 @@ git clone -b 18.06 https://github.com/garypang13/luci-theme-edge package/luci-th
 #svn co https://github.com/xiaorouji/openwrt-package/trunk/package/syncthing package/syncthing
 
 
-#git clone https://github.com/jerrykuku/node-request.git package/node-request  #京东签到依赖
-#git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus  #luci-app-jd-dailybonus[京东签到]
+git clone https://github.com/jerrykuku/node-request.git package/node-request  #京东签到依赖
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus  #luci-app-jd-dailybonus[京东签到]
 
 rm -rf ./package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon  #新的argon主题
 #全新的[argon-主题]此主题玩法很多,这里看说明【https://github.com/jerrykuku/luci-theme-argon/blob/18.06/README_ZH.md】
